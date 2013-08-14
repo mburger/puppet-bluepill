@@ -1,0 +1,9 @@
+  app.process('<%= @name %>') do |process|
+    process.pid_file = '<%= @real_pidfile %>'
+    process.start_command = '<%= @real_startprogram %>'
+    process.stop_command = '<%= @real_stopprogram %>'
+    process.start_grace_time = 60.seconds
+    process.stop_grace_time = 60.seconds
+    process.restart_grace_time = 120.seconds
+    process.checks :flapping, :times => <%= @cycles %>, :within => 300.seconds, :retry_in => 15.minutes
+  end
