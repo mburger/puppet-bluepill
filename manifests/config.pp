@@ -25,7 +25,7 @@ class bluepill::config ( ) {
       force   => $bluepill::bool_source_dir_purge,
       replace => $bluepill::manage_file_replace,
       audit   => $bluepill::manage_audit,
-      noop    => $bluepill::bool_noops,
+      noop    => $bluepill::noops,
     }
   }
   else {
@@ -34,7 +34,7 @@ class bluepill::config ( ) {
       path    => $bluepill::config_dir,
       replace => $bluepill::manage_file_replace,
       audit   => $bluepill::manage_audit,
-      noop    => $bluepill::bool_noops,
+      noop    => $bluepill::noops,
     }
   }
 

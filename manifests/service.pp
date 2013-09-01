@@ -19,7 +19,7 @@ class bluepill::service inherits bluepill {
     enable     => $bluepill::manage_service_enable,
     hasstatus  => $bluepill::service_status,
     pattern    => $bluepill::process,
-    noop       => $bluepill::bool_noops,
+    noop       => $bluepill::noops,
   }
 
   case $bluepill::package_provider {
