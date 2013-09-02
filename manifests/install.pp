@@ -16,6 +16,6 @@ class bluepill::install inherits bluepill {
   package { $bluepill::package:
     ensure    => $bluepill::manage_package,
     provider  => $bluepill::package_provider,
-    noop      => $bluepill::bool_noops,
+    noop      => $bluepill::noops,
   }
 }
